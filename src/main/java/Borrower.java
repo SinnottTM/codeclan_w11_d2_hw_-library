@@ -13,15 +13,30 @@ public class Borrower {
         return booksOut.size();
     }
 
+    public String getName() { return name; }
+
+//  Working basic takeBookFromLibrary
     public void takeBookFromLibrary(Book book){
         booksOut.add(book);
     }
 
-//    public Book returnBookToLibrary(Book book){
-//        return booksOut.remove(book);
-//    }
-
-    public String getName() {
-        return name;
+//  Working basic returnBookToLibrary
+    public Book returnBookToLibrary(Book book){
+        return booksOut.remove(0);
     }
+
+/*
+    Non-working more complex takeBookFromLibrary
+    public Book takeBookFromLibrary(Library library){
+        library.removeBook(book);
+        return booksOut.add(book);
+    }
+
+    Non-working more complex returnBookToLibrary
+    public Book returnBookToLibrary(Library library){
+        library.addBook(book);
+        return booksOut.remove(book);
+    }
+*/
+
 }

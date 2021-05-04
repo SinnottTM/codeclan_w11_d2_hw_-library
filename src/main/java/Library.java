@@ -19,8 +19,9 @@ public class Library {
             books.add(book);}
     }
 
-    public void removeBook(){
-        books.remove(0);
+    public Book removeBook(Book book){
+        books.remove(book);
+        return book;
     }
 
 }
