@@ -10,10 +10,13 @@ public class Book {
         this.genre = genre;
     }
 
+//  Get method for Title
     public String getTitle(){ return title; }
 
+//  Get method for Author
     public String getAuthor(){ return author; }
 
+//  Get method for Genre (needed for genre check)
     public String getGenre(){
         return genre;
     }
