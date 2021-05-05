@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Borrower {
+
     private String name;
     private ArrayList<Book> booksOut;
 
@@ -19,12 +20,12 @@ public class Borrower {
         return name;
     }
 
-//  Working basic takeBookFromLibrary
+//  Working basic takeBookFromLibrary, doesn't actually interact with Library
     public void takeBookFromLibrary(Book book) {
         booksOut.add(book);
     }
 
-//  Working basic returnBookToLibrary
+//  Working basic returnBookToLibrary, doesn't actually interact with Library
     public Book returnBookToLibrary(Book book) {
         return booksOut.remove(0);
     }
