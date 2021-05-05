@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Set;
 
 public class Borrower {
 
@@ -10,14 +11,29 @@ public class Borrower {
         this.booksOut = new ArrayList<Book>();
     }
 
-//  Get total books in borrowers collection
-    public int getTotalBooksOut() {
-        return booksOut.size();
-    }
-
 //  Get method for borrower name
     public String getName() {
         return name;
+    }
+
+//  Set method for borrower name
+    public void setName(String newName){
+        name = newName;
+    }
+
+//  Get method for booksOut
+    public ArrayList<Book> getBooksOut() {
+        return booksOut;
+    }
+
+//  Set method for borrower name
+    public void setBooksOut(ArrayList<Book> newBooks){
+        booksOut = newBooks;
+    }
+
+//  Get total books in borrowers collection
+    public int getBookCount() {
+        return booksOut.size();
     }
 
 //  Working basic takeBookFromLibrary, doesn't actually interact with Library
@@ -26,36 +42,11 @@ public class Borrower {
     }
 
 //  Working basic returnBookToLibrary, doesn't actually interact with Library
-    public Book returnBookToLibrary(Book book) {
-        return booksOut.remove(0);
-    }
+//    public Book returnBookToLibrary(Book book) {
+//        return booksOut.remove(0);
+//    }
+
 }
 
-/*
 
-//  Checks for borrowing, can't get to work (can't resolve book?)
-    public void getBook(Library library) {
-        this.booksOut.add(library.removeBook(book));
-    }
-
-*/
-
-
-/*
-
-//  ROUGH WORK
-
-//  Non-working more complex takeBookFromLibrary
-    public Book takeBookFromLibrary(Library library){
-        library.removeBook(book);
-        return booksOut.add(book);
-    }
-
-//  Non-working more complex returnBookToLibrary
-    public Book returnBookToLibrary(Library library){
-        library.addBook(book);
-        return booksOut.remove(book);
-    }
-
- */
 
