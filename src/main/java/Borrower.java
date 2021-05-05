@@ -25,7 +25,8 @@ public class Borrower {
         return booksOut.remove(0);
     }
 
-/*
+    /*
+
     Non-working more complex takeBookFromLibrary
     public Book takeBookFromLibrary(Library library){
         library.removeBook(book);
@@ -37,6 +38,13 @@ public class Borrower {
         library.addBook(book);
         return booksOut.remove(book);
     }
-*/
 
+    Checks for borrowing, can't get to work
+    public void borrowBook(Book book, Library library) {
+        if (library.checkForBookGenre(book)) {
+            books.add(library.removeBook(book));
+        }
+    }
+
+     */
 }

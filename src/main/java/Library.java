@@ -1,13 +1,18 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
 
     private ArrayList<Book> books;
     private int capacity;
+    HashMap<String, Integer> genreCollection;
+
 
     public Library(int capacity){
         this.capacity = capacity;
         this.books = new ArrayList<Book>();
+        this.genreCollection = new HashMap<>();
+
     }
 
     public int getTotalBooks(){
@@ -23,5 +28,13 @@ public class Library {
         books.remove(book);
         return book;
     }
+
+    /*
+
+    public Book checkForBookGenre(Book book) {
+        return books.contains();
+    }
+
+     */
 
 }
